@@ -1,8 +1,9 @@
 {
   "name": "cdk-compliant-dynamodb",
+  "description": "DynamoDb table that is compliant against most AWS Config rules",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jhornung/cdk-compliant-dynamodb.git"
+    "url": "https://github.com/oev-berlin/cdk-compliant-dynamodb.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -31,8 +32,8 @@
     "projen": "npx projen"
   },
   "author": {
-    "name": "Janek",
-    "email": "jhornung@oev.de",
+    "name": "digitalcampus360 Berlin",
+    "email": "dc360@oev.de",
     "organization": false
   },
   "devDependencies": {
