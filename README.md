@@ -1,6 +1,6 @@
 [![NPM version](https://badge.fury.io/js/cdk-compliant-dynamodb.svg)](https://badge.fury.io/js/cdk-compliant-dynamodb)
 [![PyPI version](https://badge.fury.io/py/cdk-compliant-dynamodb.svg)](https://badge.fury.io/py/cdk-compliant-dynamodb)
-![Release](https://github.com/neilkuan/cdk-compliant-dynamodb/workflows/release/badge.svg)
+![Release](https://github.com/oev-berlin/cdk-compliant-dynamodb/workflows/release/badge.svg)
 
 # cdk-compliant-dynamodb
 
