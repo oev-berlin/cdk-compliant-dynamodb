@@ -8,6 +8,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   repositoryUrl: 'https://github.com/oev-berlin/cdk-compliant-dynamodb.git',
 
   description: 'DynamoDb table that is compliant against most AWS Config rules',
+  python: {
+    distName: 'cdk-compliant-dynamodb',
+    module: 'cdk_compliant_dynamodb',
+  },
 });
 const common_exclude = [
   'cdk.out',
