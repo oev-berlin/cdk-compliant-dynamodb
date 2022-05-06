@@ -88,7 +88,13 @@ public applyRemovalPolicy(policy: RemovalPolicy): void
 
 Apply the given removal policy to this resource.
 
-The Removal Policy controls what happens to this resource when it stops being managed by CloudFormation, either because you've removed it from the CDK application or because you've made a change that requires the resource to be replaced.  The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
+The Removal Policy controls what happens to this resource when it stops
+being managed by CloudFormation, either because you've removed it from the
+CDK application or because you've made a change that requires the resource
+to be replaced.
+
+The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
+account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
 
 ###### `policy`<sup>Required</sup> <a name="policy" id="cdk-compliant-dynamodb.CompliantDynamoDb.applyRemovalPolicy.parameter.policy"></a>
 
@@ -204,7 +210,8 @@ public grant(grantee: IGrantable, actions: string): Grant
 
 Adds an IAM policy statement associated with this table to an IAM principal's policy.
 
-If `encryptionKey` is present, appropriate grants to the key needs to be added separately using the `table.encryptionKey.grant*` methods.
+If `encryptionKey` is present, appropriate grants to the key needs to be added
+separately using the `table.encryptionKey.grant*` methods.
 
 ###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-compliant-dynamodb.CompliantDynamoDb.grant.parameter.grantee"></a>
 
@@ -230,7 +237,8 @@ public grantFullAccess(grantee: IGrantable): Grant
 
 Permits all DynamoDB operations ("dynamodb:*") to an IAM principal.
 
-Appropriate grants will also be added to the customer-managed KMS key if one was configured.
+Appropriate grants will also be added to the customer-managed KMS key
+if one was configured.
 
 ###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-compliant-dynamodb.CompliantDynamoDb.grantFullAccess.parameter.grantee"></a>
 
@@ -248,7 +256,8 @@ public grantReadData(grantee: IGrantable): Grant
 
 Permits an IAM principal all data read operations from this table: BatchGetItem, GetRecords, GetShardIterator, Query, GetItem, Scan.
 
-Appropriate grants will also be added to the customer-managed KMS key if one was configured.
+Appropriate grants will also be added to the customer-managed KMS key
+if one was configured.
 
 ###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-compliant-dynamodb.CompliantDynamoDb.grantReadData.parameter.grantee"></a>
 
@@ -266,7 +275,11 @@ public grantReadWriteData(grantee: IGrantable): Grant
 
 Permits an IAM principal to all data read/write operations to this table.
 
-BatchGetItem, GetRecords, GetShardIterator, Query, GetItem, Scan, BatchWriteItem, PutItem, UpdateItem, DeleteItem  Appropriate grants will also be added to the customer-managed KMS key if one was configured.
+BatchGetItem, GetRecords, GetShardIterator, Query, GetItem, Scan,
+BatchWriteItem, PutItem, UpdateItem, DeleteItem
+
+Appropriate grants will also be added to the customer-managed KMS key
+if one was configured.
 
 ###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-compliant-dynamodb.CompliantDynamoDb.grantReadWriteData.parameter.grantee"></a>
 
@@ -284,7 +297,8 @@ public grantStream(grantee: IGrantable, actions: string): Grant
 
 Adds an IAM policy statement associated with this table's stream to an IAM principal's policy.
 
-If `encryptionKey` is present, appropriate grants to the key needs to be added separately using the `table.encryptionKey.grant*` methods.
+If `encryptionKey` is present, appropriate grants to the key needs to be added
+separately using the `table.encryptionKey.grant*` methods.
 
 ###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-compliant-dynamodb.CompliantDynamoDb.grantStream.parameter.grantee"></a>
 
@@ -310,7 +324,8 @@ public grantStreamRead(grantee: IGrantable): Grant
 
 Permits an IAM principal all stream data read operations for this table's stream: DescribeStream, GetRecords, GetShardIterator, ListStreams.
 
-Appropriate grants will also be added to the customer-managed KMS key if one was configured.
+Appropriate grants will also be added to the customer-managed KMS key
+if one was configured.
 
 ###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-compliant-dynamodb.CompliantDynamoDb.grantStreamRead.parameter.grantee"></a>
 
@@ -344,7 +359,8 @@ public grantWriteData(grantee: IGrantable): Grant
 
 Permits an IAM principal all data write operations to this table: BatchWriteItem, PutItem, UpdateItem, DeleteItem.
 
-Appropriate grants will also be added to the customer-managed KMS key if one was configured.
+Appropriate grants will also be added to the customer-managed KMS key
+if one was configured.
 
 ###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-compliant-dynamodb.CompliantDynamoDb.grantWriteData.parameter.grantee"></a>
 
@@ -362,7 +378,8 @@ public metric(metricName: string, props?: MetricOptions): Metric
 
 Return the given named metric for this Table.
 
-By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize this by using the `statistic` and `period` properties.
+By default, the metric will be calculated as a sum over a period of 5 minutes.
+You can customize this by using the `statistic` and `period` properties.
 
 ###### `metricName`<sup>Required</sup> <a name="metricName" id="cdk-compliant-dynamodb.CompliantDynamoDb.metric.parameter.metricName"></a>
 
@@ -384,7 +401,8 @@ public metricConditionalCheckFailedRequests(props?: MetricOptions): Metric
 
 Metric for the conditional check failed requests this table.
 
-By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize this by using the `statistic` and `period` properties.
+By default, the metric will be calculated as a sum over a period of 5 minutes.
+You can customize this by using the `statistic` and `period` properties.
 
 ###### `props`<sup>Optional</sup> <a name="props" id="cdk-compliant-dynamodb.CompliantDynamoDb.metricConditionalCheckFailedRequests.parameter.props"></a>
 
@@ -400,7 +418,8 @@ public metricConsumedReadCapacityUnits(props?: MetricOptions): Metric
 
 Metric for the consumed read capacity units this table.
 
-By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize this by using the `statistic` and `period` properties.
+By default, the metric will be calculated as a sum over a period of 5 minutes.
+You can customize this by using the `statistic` and `period` properties.
 
 ###### `props`<sup>Optional</sup> <a name="props" id="cdk-compliant-dynamodb.CompliantDynamoDb.metricConsumedReadCapacityUnits.parameter.props"></a>
 
@@ -416,7 +435,8 @@ public metricConsumedWriteCapacityUnits(props?: MetricOptions): Metric
 
 Metric for the consumed write capacity units this table.
 
-By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize this by using the `statistic` and `period` properties.
+By default, the metric will be calculated as a sum over a period of 5 minutes.
+You can customize this by using the `statistic` and `period` properties.
 
 ###### `props`<sup>Optional</sup> <a name="props" id="cdk-compliant-dynamodb.CompliantDynamoDb.metricConsumedWriteCapacityUnits.parameter.props"></a>
 
@@ -432,7 +452,8 @@ public metricSuccessfulRequestLatency(props?: MetricOptions): Metric
 
 Metric for the successful request latency this table.
 
-By default, the metric will be calculated as an average over a period of 5 minutes. You can customize this by using the `statistic` and `period` properties.
+By default, the metric will be calculated as an average over a period of 5 minutes.
+You can customize this by using the `statistic` and `period` properties.
 
 ###### `props`<sup>Optional</sup> <a name="props" id="cdk-compliant-dynamodb.CompliantDynamoDb.metricSuccessfulRequestLatency.parameter.props"></a>
 
@@ -448,7 +469,9 @@ public metricSystemErrorsForOperations(props?: SystemErrorsForOperationsMetricOp
 
 Metric for the system errors this table.
 
-This will sum errors across all possible operations. Note that by default, each individual metric will be calculated as a sum over a period of 5 minutes. You can customize this by using the `statistic` and `period` properties.
+This will sum errors across all possible operations.
+Note that by default, each individual metric will be calculated as a sum over a period of 5 minutes.
+You can customize this by using the `statistic` and `period` properties.
 
 ###### `props`<sup>Optional</sup> <a name="props" id="cdk-compliant-dynamodb.CompliantDynamoDb.metricSystemErrorsForOperations.parameter.props"></a>
 
@@ -480,7 +503,11 @@ public metricUserErrors(props?: MetricOptions): Metric
 
 Metric for the user errors.
 
-Note that this metric reports user errors across all the tables in the account and region the table resides in.  By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize this by using the `statistic` and `period` properties.
+Note that this metric reports user errors across all
+the tables in the account and region the table resides in.
+
+By default, the metric will be calculated as a sum over a period of 5 minutes.
+You can customize this by using the `statistic` and `period` properties.
 
 ###### `props`<sup>Optional</sup> <a name="props" id="cdk-compliant-dynamodb.CompliantDynamoDb.metricUserErrors.parameter.props"></a>
 
@@ -688,7 +715,12 @@ public readonly env: ResourceEnvironment;
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK (generally, those created by creating new class instances like Role, Bucket, etc.), this is always the same as the environment of the stack they belong to; however, for imported resources (those obtained from static methods like fromRoleArn, fromBucketName, etc.), that might be different than the stack they were imported into.
+For resources that are created and managed by the CDK
+(generally, those created by creating new class instances like Role, Bucket, etc.),
+this is always the same as the environment of the stack they belong to;
+however, for imported resources
+(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+that might be different than the stack they were imported into.
 
 ---
 
@@ -918,7 +950,10 @@ public readonly readCapacity: number;
 
 The read capacity for the table.
 
-Careful if you add Global Secondary Indexes, as those will share the table's provisioned throughput.  Can only be provided if billingMode is Provisioned.
+Careful if you add Global Secondary Indexes, as
+those will share the table's provisioned throughput.
+
+Can only be provided if billingMode is Provisioned.
 
 ---
 
@@ -998,7 +1033,14 @@ public readonly waitForReplicationToFinish: boolean;
 
 Indicates whether CloudFormation stack waits for replication to finish.
 
-If set to false, the CloudFormation resource will mark the resource as created and replication will be completed asynchronously. This property is ignored if replicationRegions property is not set.  DO NOT UNSET this property if adding/removing multiple replicationRegions in one deployment, as CloudFormation only supports one region replication at a time. CDK overcomes this limitation by waiting for replication to finish before starting new replicationRegion.
+If set to false, the CloudFormation resource will mark the resource as
+created and replication will be completed asynchronously. This property is
+ignored if replicationRegions property is not set.
+
+DO NOT UNSET this property if adding/removing multiple replicationRegions
+in one deployment, as CloudFormation only supports one region replication
+at a time. CDK overcomes this limitation by waiting for replication to
+finish before starting new replicationRegion.
 
 > [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
 
@@ -1015,7 +1057,10 @@ public readonly writeCapacity: number;
 
 The write capacity for the table.
 
-Careful if you add Global Secondary Indexes, as those will share the table's provisioned throughput.  Can only be provided if billingMode is Provisioned.
+Careful if you add Global Secondary Indexes, as
+those will share the table's provisioned throughput.
+
+Can only be provided if billingMode is Provisioned.
 
 ---
 
